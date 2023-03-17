@@ -1,6 +1,6 @@
 To initilize the repo on your own machine so you can fetch code and push commits:
 
-Make a folder for the project and open up a terminal, go to the home directory 
+Make a folder for the project and open up a terminal, go to the folder which you just created 
 
 1) git init
 2) git remote add upstream https://github.com/GabrielAddai/DoLittle.git -- to initialize it to the github repo
