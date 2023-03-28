@@ -7,6 +7,10 @@ Make a folder for the project and open up a terminal, go to the folder which you
 3) git fetch upstream -- to fetch any new code/content that someone else pushed
 4) git checkout -b <item> upstream/<item>
 
+BEFORE DOING ANYTHING MAKE SURE YOU FECTH THE CURRENT UPDATES FROM THE MASTER BRANCH
+git checkout <branch name>
+git pull origin master
+
 when you've done your work do
 
 1) git add .
