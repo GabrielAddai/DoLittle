@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <title>DoLittle Signup</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="doLittleCSS.css" />
+</head>
+
+<body>
+    <div class="Registration">
+        <form action="index.html"  method="get" onsubmit="return (unameValidator() && passValidator())">
+            <fieldset>
+                <legend>Sign Up:</legend>
+                <!-- Username box -->
+                <label for="username"><b>Username:</b></label>
+                <input type="text" required="required" name="username" />
+                <!-- Password box -->
+                <label for="password"><b>Password:</b></label>
+                <input type="password" required="required" name="password" />
+                <!-- Verify password box -->
+                <label for="v_password"><b>Verify Password:</b></label>
+                <input type="password" required="required" name="v_password" />
+                <!-- Email box -->
+                <label for="email"><b>Email:</b></label>
+                <input type="text" required="required" name="email" />
+                <!--Submit button-->
+                <input type="submit" id="submit" />
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
