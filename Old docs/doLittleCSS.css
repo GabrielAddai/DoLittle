@@ -1,0 +1,44 @@
+h1 {
+    color: #003cff;
+}
+
+/* Add padding to containers */
+.Registration {
+    padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 98%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: table-column;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.header {
+    padding-left: 15px;
+}
+
+table {
+    width: 75%;
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: #808080;
+}
+
+th,
+td,
+tr {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid;
+}
