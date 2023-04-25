@@ -8,19 +8,7 @@ import Homepage from '../components/homepage';
 
 function App() {
   return (
-    <div className="Login">
     <Login/>
-
-
-    {/* <Homepage /> */}
-    
-
-    {/* <div className="Registration">
-    <Registration />
-     
-    </div> */}
-
-    </div>
   );
 }
 export default App;
