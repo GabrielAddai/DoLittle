@@ -1,7 +1,39 @@
 //import Link from 'next/link'
-import React from 'react';
+import React, { useState } from 'react';
+import axios from "axios";
+import { useRouter } from 'next/router';
+
 
 const Registration = () => {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    try {
+      const response = await axios.post("/api/signup", {
+        email,
+        password,
+      });
+
+      if (response.status === 201) {
+        router.push("/");
+      }
+    } catch (error) {
+      setError(error.response.data.message);
+    }
+  };
+
     return (
         <div className="container mx-auto py-8">
   <h1 className="text-2xl font-bold mb-6 text-center">Registration Form</h1>
