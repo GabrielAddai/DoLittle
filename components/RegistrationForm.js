@@ -6,33 +6,33 @@ import { useRouter } from 'next/router';
 
 export default function RegistrationForm() {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
-  const router = useRouter();
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
+  // const [error, setError] = useState("");
+  // const router = useRouter();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
+  //   if (password !== confirmPassword) {
+  //     setError("Passwords do not match");
+  //     return;
+  //   }
 
-    try {
-      const response = await axios.post("/api/signup", {
-        email,
-        password,
-      });
+  //   try {
+  //     const response = await axios.post("/api/signup", {
+  //       email,
+  //       password,
+  //     });
 
-      if (response.status === 201) {
-        router.push("/");
-      }
-    } catch (error) {
-      setError(error.response.data.message);
-    }
-  };
+  //     if (response.status === 201) {
+  //       router.push("/");
+  //     }
+  //   } catch (error) {
+  //     setError(error.response.data.message);
+  //   }
+  // };
 
     return (
         <div className="container mx-auto py-8">
@@ -90,6 +90,7 @@ export default function RegistrationForm() {
       >
         Confirm Password
       </label>
+      
       <input
         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
         type="password"
@@ -100,10 +101,8 @@ export default function RegistrationForm() {
     </div>
     <button
       className="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
-      type="submit"
-    >
-      Register
-    </button>
+      type="submit">Register</button>
+
   </form>
 </div>
     );

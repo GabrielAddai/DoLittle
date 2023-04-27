@@ -1,7 +1,7 @@
 // authentication middleware
 import bcrypt from 'bcryptjs';
 
-// Dummy data
+// dummy data
 const users = [
   {
     id: 1,

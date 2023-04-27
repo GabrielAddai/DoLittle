@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 
+
 const secret = process.env.JWT_SECRET;
 
 export default async function handler(req, res) {
@@ -13,8 +14,9 @@ export default async function handler(req, res) {
     // Authenticate user
     const user = await authenticateUser(email, password)
   
-    if (user) {
-      // Generate JWT token
+
+    if(user){
+      //JWT token
       const token = jwt.sign({ userId: user.id, username: user.email }, secret, { expiresIn: '1d' })
   
       res.status(200).json({ token })
