@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from 'next/router';
 
 
-const Registration = () => {
+export default function RegistrationForm() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -108,4 +108,3 @@ const Registration = () => {
 </div>
     );
 }
-export default Registration;
