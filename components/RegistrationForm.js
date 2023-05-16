@@ -1,7 +1,30 @@
 //import Link from 'next/link'
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
-const Registration = () => {
+
+export default function RegistrationForm() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const router = useRouter();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    fetch('http://localhost:3000/api/signup', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, password})})
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+  };
+
     return (
         <div className="container mx-auto py-8">
   <h1 className="text-2xl font-bold mb-6 text-center">Registration Form</h1>
@@ -58,6 +81,7 @@ const Registration = () => {
       >
         Confirm Password
       </label>
+      
       <input
         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
         type="password"
@@ -68,12 +92,9 @@ const Registration = () => {
     </div>
     <button
       className="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
-      type="submit"
-    >
-      Register
-    </button>
+      type="submit">Register</button>
+
   </form>
 </div>
     );
 }
-export default Registration;
