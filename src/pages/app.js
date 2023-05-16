@@ -20,6 +20,7 @@ import RegistrationForm from '../../components/RegistrationForm';
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
     <div className='App'>
       <Switch>
@@ -30,6 +31,9 @@ function App() {
       </Switch>
     </div>
     </Router>
+=======
+    <Login/>
+>>>>>>> master
   );
 }
 
