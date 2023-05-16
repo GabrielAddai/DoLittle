@@ -36,14 +36,10 @@ import LoginForm from '../../components/LoginForm';
 
 const Home = () => {
   return (
-<<<<<<< HEAD
     
-      
-      <LoginForm></LoginForm>
-    
-=======
+    <div>
       <App />
->>>>>>> master
+    </div>
   );
 };
 

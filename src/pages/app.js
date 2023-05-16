@@ -20,20 +20,19 @@ import RegistrationForm from '../../components/RegistrationForm';
 
 function App() {
   return (
-<<<<<<< HEAD
-    <Router>
-    <div className='App'>
-      <Switch>
-        <Route path='/' component = {Homepage}/>
-          <Route path="/sign-in" exact component={<Login />} />
-          <Route path="/sign-up" element={<Registration />} />
-          <Route path="/about" element={<About />} />
-      </Switch>
-    </div>
-    </Router>
-=======
+    <div className="Login">
     <Login/>
->>>>>>> master
+
+
+    {/* <Homepage /> */}
+    
+
+    {/* <div className="Registration">
+    <Registration />
+     
+    </div> */}
+
+    </div>
   );
 }
 
