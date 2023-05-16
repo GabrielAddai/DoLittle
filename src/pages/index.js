@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import App from './app';
+import Homepage from './homepage';
 import axios from "axios";
 
 
@@ -22,10 +23,7 @@ export default function Home() {
   // }
 
   return (
-    
-    <div>
-      <App />
-    </div>
+    <App />
   );
 }
 
